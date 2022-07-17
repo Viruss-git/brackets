@@ -10,18 +10,14 @@ module.exports = function check(str, bracketsConfig) {
   // Проверяем кол-во элементов в строке. Если кол-во нечетное, возвращаем false
   // Если кол-во четное, продолжаем выполнение алгоритма
   if (str.length % 2 == 0) {
-
     for (let i = 0; i < arrStartEndBrackets.length; i++) {
       if (str.includes(arrStartEndBrackets[i])) {
         str = str.replace(arrStartEndBrackets[i], '');
         i = -1; // Сбрасываем i до -1 что бы выполнить скрипт когда в массиве останется одно значение [0]
       }
     }
-
     return (str) ? false : true;
-
   } else {
     return false;
   }
-
 };
