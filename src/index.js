@@ -12,7 +12,6 @@ module.exports = function check(str, bracketsConfig) {
   if (str.length % 2 == 0) {
 
     for (let i = 0; i < arrStartEndBrackets.length; i++) {
-      console.log(str);
       if (str.includes(arrStartEndBrackets[i])) {
         str = str.replace(arrStartEndBrackets[i], '');
         i = -1; // Сбрасываем i до -1 что бы выполнить скрипт когда в массиве останется одно значение [0]
@@ -25,4 +24,4 @@ module.exports = function check(str, bracketsConfig) {
     return false;
   }
 
-}
+};
